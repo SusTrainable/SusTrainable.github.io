@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <meta property="og:image" content="https://sustrainable.github.io/images/bannerSTText_black.png">
+  <meta property="og:url" content="https://sustrainable.github.io/" />
 
   <title>SusTrainable</title>
 
@@ -45,6 +47,40 @@
   <script type='text/javascript' src='js/plugins/imagesloaded.min.js'></script>
   <script type='text/javascript' src='js/plugins/jquery.newstape.js'></script>
   <script type='text/javascript' src='js/plugins/imagesloaded.min-3.js'></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+  function openTab(tab) {
+    var x = document.getElementsByClassName("tab");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+
+    var x = document.getElementsByClassName("nav-selector");
+    for (i = 0; i < x.length; i++) {
+      x[i].classList.remove("active");
+    }
+
+    var link = "nav-"+tab;
+    document.getElementById(link).classList.add("active");
+    document.getElementById(tab).style.display = "block";
+
+  }
+  </script>
+
+  <script>
+  (function($){
+    $(window).load(function(){
+      /* initialize scrollbar */
+      $("#twitter-widget-holder").mCustomScrollbar({
+        theme:"dark-3",
+        scrollButtons:{enable:true}
+      });
+      /* insert twitter widget js in window load fn */
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    });
+  })(jQuery);
+  </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113713203-1"></script>
@@ -56,6 +92,24 @@
   gtag('config', 'UA-113713203-1');
   </script>
 
+  <script type="text/javascript">
+  $( document ).ready(function() {
+
+    var today = new Date();
+
+      // Main Conference Dates
+      var dateAbstract = new Date(Date.UTC(2018,3,21, 11,59,59));
+      var datePaper = new Date(Date.UTC(2018,3,27, 11,59,59));
+
+      var diffAbstract = Math.ceil((Math.abs(dateAbstract.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+      var diffPaper = Math.ceil((Math.abs(datePaper.getTime() - today.getTime())) / (1000 * 3600 * 24)).toString() + " days left";
+
+
+    });
+
+  </script>
+
+
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
   <script>
@@ -63,7 +117,6 @@
     window.cookieconsent.initialise(json)
   });
   </script>
-  
 </head>
 
 <body>
@@ -78,8 +131,8 @@
   }(document, 'script', 'facebook-jssdk'));
   </script>
 
-<!-- Navigation -->
-    <nav class="fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- Navigation -->
+  <nav class="fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container" style="max-width: 1160px;">
       <a class="navbar-brand" style="padding: 5px;" href="index.html"><img src="images/bannerSTText.png" style="width: 225px;"></a>
         <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,6 +144,16 @@
             <li class="nav-item dropdown" >
               <a class="nav-link" style="padding-right: 1rem; padding-left: 1rem;" href="about.html">
                 About
+              </a>
+            </li>
+            <li class="nav-item dropdown" >
+              <a class="nav-link" style="padding-right: 1rem; padding-left: 1rem;" href="events.html">
+                Events
+              </a>
+            </li>
+            <li class="nav-item dropdown" >
+              <a class="nav-link" style="padding-right: 1rem; padding-left: 1rem;" href="publications.html">
+                Publications
               </a>
             </li>
             <li class="nav-item dropdown" >
@@ -133,22 +196,24 @@
 
       <!-- Footer -->
       <footer class="py-5 bg-dark">
-        <div class="container" style="max-width: 1060px;">
-          <div class="row">
-            <div class="col-md-2 col-sm-2 text-white">
-              <h4>SusTrainable</h4>
-              <a href="about.html" class="text-white">About</a><br/>
-            </div>
-            <div class="col-md-2 col-sm-2 text-white">
-              <h4>Members</h4>
-              <a href="organizers.html" class="text-white">Members</a><br/>
-              <a href="partners.html" class="text-white">Partner Institutions</a><br/>
-              <a href="advisors.html" class="text-white">Advisory Board</a><br/>
-            </div>
+      <div class="container" style="max-width: 1060px;">
+        <div class="row">
+          <div class="col-md-2 col-sm-2 text-white">
+            <h4>SusTrainable</h4>
+            <a href="about.html" class="text-white">About</a><br/>
+            <a href="events.html" class="text-white">Events</a><br/>
+            <a href="publications.html" class="text-white">Publications</a><br/>
+          </div>
+          <div class="col-md-2 col-sm-2 text-white">
+            <h4>Members</h4>
+            <a href="organizers.html" class="text-white">Members</a><br/>
+            <a href="partners.html" class="text-white">Partner Institutions</a><br/>
+            <a href="advisors.html" class="text-white">Advisory Board</a><br/>
           </div>
         </div>
-        <!-- /.container -->
-      </footer>
+      </div>
+      <!-- /.container -->
+    </footer>
 
       <!-- Bootstrap core JavaScript -->
       <script src="vendor/jquery/jquery.min.js"></script>

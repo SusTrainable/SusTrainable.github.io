@@ -147,6 +147,16 @@
               </a>
             </li>
             <li class="nav-item dropdown" >
+              <a class="nav-link" style="padding-right: 1rem; padding-left: 1rem;" href="events.html">
+                Events
+              </a>
+            </li>
+            <li class="nav-item dropdown" >
+              <a class="nav-link" style="padding-right: 1rem; padding-left: 1rem;" href="publications.html">
+                Publications
+              </a>
+            </li>
+            <li class="nav-item dropdown" >
               <a class="nav-link" style="padding-right: 1rem; padding-left: 1rem;" href="organizers.html">
                 Members
               </a>
@@ -251,20 +261,89 @@
               <div class="panel-heading clearfix">
                 <div class="panel-title">
                   <nav class="nav nav-fill nav-pills">
-                    <a id="nav-latest-news" class="nav-selector nav-item nav-link active" href="#!" onclick="openTab('latest-news')">
-                      Latest News
-                    </a>
-                    <a id="nav-upcoming-dates" class="nav-selector nav-item nav-link" href="#!" onclick="openTab('upcoming-dates')">
+                    <a id="nav-upcoming-dates" class="nav-selector nav-item nav-link active" href="#!" onclick="openTab('upcoming-dates')">
                       Upcoming Dates
                     </a>
+                    <a id="nav-latest-news" class="nav-selector nav-item nav-link" href="#!" onclick="openTab('latest-news')">
+                      Latest News
+                    </a>
+                    
                   </nav>
                 </div>
               </div>
-              <div id="latest-news"  class="tab carousel slide carousel-multi-item" data-ride="carousel">
+
+              <div id="upcoming-dates" class="tab">
+                <div id="twitter-timeline-frame">
+                  <div class="list-group list-group-flush" style="margin-bottom: 0px;">
+                    <a href="#!" class="list-group-item list-group-item-hover">
+                      <b>1-5 November, 2021 <span class="badge badge-info badge-pill">NEW</span></b>
+                      <span id="sp-camera-ready-warning-badge" class="badge badge-danger badge-pill"></span>
+                      <blockquote class="blockquote blockquote-flush">
+                        <p class="h4">Teacher's training <br>@ Radboud University Nijmegen, NL </p>
+                        <!-- 
+                        <div class="tool-tip badge badge-pill" style="float: right;">
+                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
+                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
+                        </div>
+                      -->
+                        <footer>Teacher's Training</footer>
+                      </blockquote>
+                    </a>
+                  </div>
+                </div>
+              </div>  
+
+              <div id="latest-news" style="display:none;" class="tab carousel slide carousel-multi-item" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
+
 
                   <!--First slide-->
                   <div class="carousel-item active" style="height: 100%; min-height: auto;">
+
+                    <div class="col-sm-12 clearfix d-md-block">
+                      <div class="card mb-2 news-block">
+                        <div class="spacer"></div>
+                        <div class="col-sm-12">
+                          <span class="col-xs-3 nopadding">
+                            <img class="img-fluid" src="images/logos/iticse.png" alt="springer">
+                          </span>
+                          <span class="col-xs-9 nopadding">
+                            <b style="margin-left: 0%; vertical-align: top;">Accepted Paper in: </b>
+                              <br/><i>Innovation and Technology in Computer Science Education (ITiCSE)</i><br/>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  July 2021</small></i>
+                          </span>
+                        </div>
+                        <div class="card-body">
+                          <span style="white-space: pre-line">&ensp;</span>
+                          <p class="card-text">Bringing Green Software to Computer Science Curriculum - Perspectives from Researchers and Educators</p>
+                          <a href="https://dl.acm.org/doi/10.1145/3430665.3456386?sid=SCITRUS"><i class="fa fa-plus-circle more-info-link" aria-hidden="true">  Show Paper</i></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-12 clearfix d-md-block">
+                      <div class="card mb-2 news-block">
+                        <div class="spacer"></div>
+                        <div class="col-sm-12">
+                          <span class="col-xs-3 nopadding">
+                            <img class="img-fluid" src="images/logos/uminho.jpg" alt="springer">
+                          </span>
+                          <span class="col-xs-9 nopadding">
+                            <b style="margin-left: 0%; vertical-align: top;">PhD Thesis, Universidade do Minho</b>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  January 2021</small></i>
+                          </span>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">Supporting Software Developers in Making Energy Saving Decisions</p>
+                          <a href="https://drive.google.com/file/d/1w21vHf4-sDFu1u6h-Z78TRrZ0DViODlt/view?usp=sharing"><i class="fa fa-plus-circle more-info-link" aria-hidden="true">  Show Thesis</i></a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!--First slide-->
+                  <div class="carousel-item" style="height: 100%; min-height: auto;">
 
                     <div class="col-sm-12 clearfix d-md-block">
                       <div class="card mb-2 news-block">
@@ -276,7 +355,7 @@
                           <span class="col-xs-9 nopadding">
                             <b style="margin-left: 0%; vertical-align: top;">Accepted Journal Article in: </b>
                               <br/><i>Science of Computer Programming</i><br/>
-                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  January. 1, 2021</small></i>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  January 2021</small></i>
                           </span>
                         </div>
                         <div class="card-body">
@@ -297,12 +376,12 @@
                           <span class="col-xs-9 nopadding">
                             <b style="margin-left: 0%; vertical-align: top;">Accepted Journal Article in: </b>
                               <br/><i>Empirical Software Engineering</i><br/>
-                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  January. 1, 2021</small></i>
+                            <i class="fa fa-calendar tiny" aria-hidden="true"><small>  January 2021</small></i>
                           </span>
                         </div>
                         <div class="card-body">
                           <p class="card-text">GreenHub: A Large-scale Collaborative Dataset to Battery Consumption Analysis of Android Devices</p>
-                          <a href="https://dx.doi.org/10.1007/s10664-020-09925-5"><i class="fa fa-plus-circle more-info-link" aria-hidden="true">  Show Journal (To appear)</i></a>
+                          <a href="https://dx.doi.org/10.1007/s10664-020-09925-5"><i class="fa fa-plus-circle more-info-link" aria-hidden="true">  Show Journal</i></a>
                         </div>
                       </div>
                     </div>
@@ -318,23 +397,7 @@
                 </div>
               </div>
 
-              <div id="upcoming-dates" style="display:none;" class="tab">
-                <div id="twitter-timeline-frame">
-                  <div class="list-group list-group-flush" style="margin-bottom: 0px;">
-                    <a href="#!" class="list-group-item list-group-item-hover">
-                      <b>2021</b>
-                      <span id="sp-camera-ready-warning-badge" class="badge badge-danger badge-pill"></span>
-                      <blockquote class="blockquote blockquote-flush">
-                        <p class="h4">Upcoming news</p>
-                        <div class="tool-tip badge badge-pill" style="float: right;">
-                          <i class="fa fa-clock-o" aria-hidden="true"></i>  AoE
-                          <span class="tool-tiptext tool-tip-top">Anywhere on Earth</span>
-                        </div>
-                      </blockquote>
-                    </a>
-                  </div>
-                </div>
-              </div>
+              
 
             </div>
             <div class="spacer"></div>
@@ -365,6 +428,8 @@
           <div class="col-md-2 col-sm-2 text-white">
             <h4>SusTrainable</h4>
             <a href="about.html" class="text-white">About</a><br/>
+            <a href="events.html" class="text-white">Events</a><br/>
+            <a href="publications.html" class="text-white">Publications</a><br/>
           </div>
           <div class="col-md-2 col-sm-2 text-white">
             <h4>Members</h4>
